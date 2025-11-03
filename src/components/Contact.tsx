@@ -32,7 +32,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="mailto:info@willahandmadedesign.nl"
+            href="mailto:Willekevdvw@gmail.com"
             className="bg-background p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-border group"
           >
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
@@ -42,7 +42,7 @@ const Contact = () => {
               E-mail
             </h3>
             <p className="font-poppins text-muted-foreground">
-              info@willahandmadedesign.nl
+              Willekevdvw@gmail.com
             </p>
           </a>
 
