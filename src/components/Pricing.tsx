@@ -1,12 +1,15 @@
 const pricingItems = [
-  { service: "Zoom/naad herstellen", price: "Vanaf €8" },
-  { service: "Broek inkorten", price: "Vanaf €12" },
-  { service: "Rits vervangen", price: "Vanaf €15" },
-  { service: "Gaten herstellen/stoppen", price: "Vanaf €10" },
-  { service: "Eenvoudige patches aanbrengen", price: "Vanaf €8" },
-  { service: "Borduren (klein motief)", price: "Vanaf €15" },
-  { service: "Borduren (groot/complex)", price: "Op aanvraag" },
-  { service: "Custom upcycling project", price: "Op aanvraag" },
+  { service: "Kleding inkorten", price: "V.A. €10,00" },
+  { service: "Kleine reparatie", price: "V.A. €5,00" },
+  { service: "Grote reparatie", price: "V.A. €10,00" },
+  { service: "Kleding innemen", price: "V.A. €10,00" },
+  { service: "Rits vervangen", price: "V.A. €15,00" },
+  { service: "Knopen vervangen, per knoop", price: "V.A. €1,00" },
+  { service: "Gaatje maken (riem, tas, etc)", price: "V.A. €1,00" },
+  { service: "Patroon op maat", price: "V.A. €50,00" },
+  { service: "Kleding op maat", price: "V.A. €50,00" },
+  { service: "Luxe kleding", price: "V.A. €20,00" },
+  { service: "Overige reparatie (zitzak, tassen, kussens, etc.)", price: "V.A. €10,00" },
 ];
 
 const Pricing = () => {
@@ -43,7 +46,7 @@ const Pricing = () => {
           
           <div className="mt-8 text-center">
             <p className="font-poppins text-muted-foreground italic">
-              Prijzen zijn indicatief. Voor complexere werkzaamheden ontvang je een offerte op maat.
+              Exclusief arbeidskosten
             </p>
           </div>
         </div>

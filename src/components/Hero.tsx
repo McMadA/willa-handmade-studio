@@ -1,4 +1,5 @@
 import heroImage from "@/assets/hero-workspace.jpg";
+import willaLogo from "@/assets/willa-logo.jpg";
 
 const Hero = () => {
   return (
@@ -11,7 +12,12 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <h1 className="font-playfair text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in">
+        <img 
+          src={willaLogo} 
+          alt="Willa Handmade Design Logo" 
+          className="w-48 md:w-64 mx-auto mb-6 animate-fade-in"
+        />
+        <h1 className="font-playfair text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
           Willa Handmade Design
         </h1>
         <p className="font-poppins text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>

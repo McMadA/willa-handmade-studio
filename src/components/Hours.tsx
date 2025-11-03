@@ -1,9 +1,17 @@
 import { Clock } from "lucide-react";
 
 const hours = [
-  { days: "Maandag - Vrijdag", time: "9:00 - 17:00" },
-  { days: "Zaterdag", time: "10:00 - 14:00" },
-  { days: "Zondag", time: "Gesloten" },
+  { days: "4 Nov", time: "9:00 tot 17:00" },
+  { days: "11 Nov", time: "9:00 tot 17:00" },
+  { days: "12 Nov", time: "9:00 tot 18:00" },
+  { days: "13 Nov", time: "9:00 tot 17:00" },
+  { days: "18 Nov", time: "9:00 tot 17:00" },
+  { days: "19 Nov", time: "9:00 tot 13:00" },
+  { days: "20 Nov", time: "9:00 tot 17:00" },
+  { days: "25 Nov", time: "9:00 tot 17:00" },
+  { days: "26 Nov", time: "9:00 tot 15:30" },
+  { days: "27 Nov", time: "9:00 tot 17:00" },
+  { days: "29 Nov", time: "9:00 tot 18:00" },
 ];
 
 const Hours = () => {
@@ -19,7 +27,7 @@ const Hours = () => {
               Openingstijden
             </h2>
             <p className="font-poppins text-xl text-muted-foreground">
-              Graag op afspraak voor persoonlijk advies
+              Ook open op afspraak: 06-25393938
             </p>
           </div>
 
