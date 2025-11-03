@@ -20,14 +20,11 @@ const Hero = () => {
         <h1 className="font-playfair text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
           Willa Handmade Design
         </h1>
-        <p className="font-poppins text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 animate-fade-in italic" style={{ animationDelay: '0.15s' }}>
+        <p className="font-poppins text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in italic" style={{ animationDelay: '0.15s' }}>
           Willa kunt u vinden in Niekerk, Groningen.<br />
           Hier komen al jou textiel wensen uit!<br />
           <br />
           tot snel bij Willa..!!
-        </p>
-        <p className="font-poppins text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          Geef jouw kleding een tweede leven met ambachtelijke zorg en creativiteit
         </p>
         <a 
           href="#contact" 
