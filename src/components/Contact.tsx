@@ -1,4 +1,4 @@
-import { Facebook, Mail, MessageCircle } from "lucide-react";
+import { Facebook, Mail, MessageCircle, Instagram } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -13,7 +13,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <a
             href="https://www.facebook.com/willahandmadedesign/"
             target="_blank"
@@ -60,6 +60,23 @@ const Contact = () => {
             </h3>
             <p className="font-poppins text-muted-foreground">
               Direct contact via WhatsApp
+            </p>
+          </a>
+
+          <a
+            href="https://www.instagram.com/willa_handmade_style__/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-background p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-border group"
+          >
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+              <Instagram className="w-8 h-8 text-primary" />
+            </div>
+            <h3 className="font-playfair text-2xl font-semibold text-foreground mb-3">
+              Instagram
+            </h3>
+            <p className="font-poppins text-muted-foreground">
+              Volg mijn creaties op Instagram
             </p>
           </a>
         </div>
