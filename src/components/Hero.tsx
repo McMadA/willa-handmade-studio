@@ -3,7 +3,7 @@ import willaLogo from "@/assets/willa-logo.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden pt-20 pb-16">
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
