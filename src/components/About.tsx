@@ -22,14 +22,14 @@ const About = () => {
             </div>
             
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-accent">
                 <img 
                   src={detailImage} 
                   alt="Handgemaakte borduurdetails" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-accent/20 rounded-2xl -z-10" />
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-accent/30 rounded-2xl border-2 border-accent -z-10" />
             </div>
           </div>
         </div>
