@@ -15,9 +15,9 @@ const Hero = () => {
         <img 
           src={willaLogo} 
           alt="Willa Handmade Design Logo" 
-          className="w-48 md:w-64 mx-auto mb-6 animate-fade-in"
+          className="w-48 h-48 md:w-64 md:h-64 mx-auto mb-6 animate-fade-in rounded-full object-cover"
         />
-        <h1 className="font-playfair text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+        <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
           Willa Handmade Design
         </h1>
         <p className="font-poppins text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in italic" style={{ animationDelay: '0.15s' }}>

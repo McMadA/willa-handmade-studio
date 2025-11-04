@@ -3,10 +3,11 @@ import { Menu, X } from "lucide-react";
 import willaLogo from "@/assets/willa-logo.jpg";
 
 const navItems = [
-  { name: "Over Mij", href: "#over-mij" },
+  { name: "Eigenaar", href: "#over-mij" },
+  { name: "WILLA", href: "#" },
+  { name: "Openingstijden", href: "#openingstijden" },
   { name: "Diensten", href: "#diensten" },
   { name: "Prijzen", href: "#prijzen" },
-  { name: "Openingstijden", href: "#openingstijden" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -41,7 +42,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" onClick={(e) => handleClick(e, "#")} className="flex items-center">
-            <img src={willaLogo} alt="Willa Logo" className="h-12 w-auto" />
+            <img src={willaLogo} alt="Willa Logo" className="h-12 w-12 rounded-full object-cover" />
           </a>
 
           {/* Desktop Menu */}
