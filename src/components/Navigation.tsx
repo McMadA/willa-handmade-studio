@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import willaLogo from "@/assets/willa-logo.jpg";
 
 const navItems = [
-  { name: "WILLA", href: "#over-mij" },
+  { name: "WILLA", href: "#over" },
   { name: "Openingstijden", href: "#openingstijden" },
   { name: "Diensten", href: "#diensten" },
   { name: "Prijzen", href: "#prijzen" },
