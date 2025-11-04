@@ -4,7 +4,7 @@ import willaLogo from "@/assets/willa-logo.jpg";
 
 const navItems = [
   { name: "Eigenaar", href: "#over-mij" },
-  { name: "WILLA", href: "#" },
+  { name: "WILLA", href: "#over-mij" },
   { name: "Openingstijden", href: "#openingstijden" },
   { name: "Diensten", href: "#diensten" },
   { name: "Prijzen", href: "#prijzen" },
