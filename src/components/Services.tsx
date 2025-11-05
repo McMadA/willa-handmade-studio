@@ -42,7 +42,7 @@ const Services = () => {
             return (
               <div 
                 key={index}
-                className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-border"
+                className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-4 border-accent"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                   <Icon className="w-8 h-8 text-primary" />

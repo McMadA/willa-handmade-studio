@@ -31,7 +31,7 @@ const Hours = () => {
             </p>
           </div>
 
-          <div className="bg-card rounded-2xl shadow-xl overflow-hidden border border-border">
+          <div className="bg-card rounded-2xl shadow-xl overflow-hidden border-4 border-accent">
             <div className="divide-y divide-border">
               {hours.map((item, index) => (
                 <div 

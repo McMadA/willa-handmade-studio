@@ -26,7 +26,7 @@ const Pricing = () => {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <div className="bg-background rounded-2xl shadow-xl overflow-hidden border border-border">
+          <div className="bg-background rounded-2xl shadow-xl overflow-hidden border-4 border-accent">
             <div className="divide-y divide-border">
               {pricingItems.map((item, index) => (
                 <div 
