@@ -2,7 +2,7 @@ import { Clock } from "lucide-react";
 
 const hours = [
   { days: "4 Nov", time: "9:00 tot 17:00" },
-  { days: "11 Nov", time: "9:00 tot 17:00" },
+  { days: "11 Nov", time: "Gesloten (concert)" },
   { days: "12 Nov", time: "9:00 tot 18:00" },
   { days: "13 Nov", time: "9:00 tot 17:00" },
   { days: "18 Nov", time: "9:00 tot 17:00" },
