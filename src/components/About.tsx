@@ -1,4 +1,5 @@
 import detailImage from "@/assets/detail-embroidery.jpg";
+import ownerPortrait from "@/assets/owner-portrait.jpg";
 
 const About = () => {
   return (
@@ -6,7 +7,7 @@ const About = () => {
       {/* Eigenaar Section */}
       <section id="eigenaar" className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
             <div className="space-y-6">
               <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground">
                 Eigenaar
@@ -30,6 +31,20 @@ const About = () => {
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-accent/30 rounded-2xl border-2 border-accent -z-10" />
+            </div>
+          </div>
+
+          {/* Owner Portrait */}
+          <div className="mt-12 max-w-2xl mx-auto">
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-4 border-accent">
+                <img 
+                  src={ownerPortrait} 
+                  alt="Willeke - Eigenaar van WILLA" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-accent/30 rounded-2xl border-2 border-accent -z-10" />
             </div>
           </div>
         </div>
