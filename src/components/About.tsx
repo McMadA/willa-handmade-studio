@@ -41,7 +41,7 @@ const About = () => {
                 <img 
                   src={ownerPortrait} 
                   alt="Willeke - Eigenaar van WILLA" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-accent/30 rounded-2xl border-2 border-accent -z-10" />
