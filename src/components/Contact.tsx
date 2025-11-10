@@ -1,4 +1,4 @@
-import { Facebook, Mail, MessageCircle, Instagram } from "lucide-react";
+import { Facebook, Mail, MessageCircle, Instagram, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -13,7 +13,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           <a
             href="https://www.facebook.com/willahandmadedesign/"
             target="_blank"
@@ -79,6 +79,18 @@ const Contact = () => {
               Volg mijn creaties op Instagram
             </p>
           </a>
+
+          <div className="bg-background p-8 rounded-2xl shadow-lg border-4 border-accent">
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+              <MapPin className="w-8 h-8 text-primary" />
+            </div>
+            <h3 className="font-playfair text-2xl font-semibold text-foreground mb-3">
+              Adres
+            </h3>
+            <p className="font-poppins text-muted-foreground">
+              Bloemersmastraat 20, Niekerk
+            </p>
+          </div>
         </div>
       </div>
     </section>
