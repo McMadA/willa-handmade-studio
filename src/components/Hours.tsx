@@ -1,17 +1,17 @@
 import { Clock } from "lucide-react";
 
 const hours = [
-  { days: "4 Nov", time: "9:00 tot 17:00" },
-  { days: "11 Nov", time: "Gesloten" },
-  { days: "12 Nov", time: "9:00 tot 18:00" },
-  { days: "13 Nov", time: "9:00 tot 17:00" },
-  { days: "18 Nov", time: "9:00 tot 17:00" },
-  { days: "19 Nov", time: "9:00 tot 13:00" },
-  { days: "20 Nov", time: "9:00 tot 17:00" },
-  { days: "25 Nov", time: "9:00 tot 17:00" },
-  { days: "26 Nov", time: "9:00 tot 15:30" },
-  { days: "27 Nov", time: "9:00 tot 17:00" },
-  { days: "29 Nov", time: "9:00 tot 18:00" },
+  { days: "2 dec", time: "9:00 tot 18:00" },
+  { days: "3 dec", time: "9:00 tot 17:30" },
+  { days: "4 dec", time: "9:00 tot 17:30" },
+  { days: "9 dec", time: "9:00 tot 18:00" },
+  { days: "10 dec", time: "9:00 tot 17:30" },
+  { days: "11 dec", time: "9:00 tot 17:30" },
+  { days: "16 dec", time: "9:00 tot 18:00 & 19:30 tot 21:00" },
+  { days: "17 dec", time: "9:15 tot 17:30" },
+  { days: "18 dec", time: "9:00 tot 17:30" },
+  { days: "23 dec", time: "9:00 tot 18:00 & 19:30 tot 21:00" },
+  { days: "24 dec", time: "9:00 tot 18:00" },
 ];
 
 const Hours = () => {
