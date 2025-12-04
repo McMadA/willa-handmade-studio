@@ -1,4 +1,5 @@
 import willekePortrait from "@/assets/willeke-portrait.jpg";
+import willaCollage from "@/assets/willa-collage.png";
 
 const About = () => {
   return (
@@ -38,17 +39,28 @@ const About = () => {
       {/* WILLA Section */}
       <section id="willa" className="py-20 bg-card">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto space-y-6">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground text-center">
-              WILLA
-            </h2>
-            <div className="space-y-4 font-poppins text-lg text-muted-foreground leading-relaxed">
-              <p>
-                Willa is een naaiatelier waar je voor al je textiel wensen of reparaties Langs kunt komen. Ze doet het alleen dus houd rekening met een aantal weken maak tijd.
-              </p>
-              <p>
-                De naam WILLA leid zich af van (Will) eke en de A staat voor atelier waar je Willeke vindt die druk met jou opdracht bezig is. WILLA staat voor duurzaamheid en bewustwording voor je kleding. Want waarom nieuw kopen als het ook gemaakt kan worden of er juist iets heel nieuws van maken. Daarvoor ben je bij WILLa op het juiste adres. Elke vraag mag gesteld worden en samen met Willeke kom je tot een goede oplossing.
-              </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground">
+                  WILLA
+                </h2>
+                <div className="space-y-4 font-poppins text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    Willa is een naaiatelier waar je voor al je textiel wensen of reparaties Langs kunt komen. Ze doet het alleen dus houd rekening met een aantal weken maak tijd.
+                  </p>
+                  <p>
+                    De naam WILLA leid zich af van (Will) eke en de A staat voor atelier waar je Willeke vindt die druk met jou opdracht bezig is. WILLA staat voor duurzaamheid en bewustwording voor je kleding. Want waarom nieuw kopen als het ook gemaakt kan worden of er juist iets heel nieuws van maken. Daarvoor ben je bij WILLa op het juiste adres. Elke vraag mag gesteld worden en samen met Willeke kom je tot een goede oplossing.
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <img 
+                  src={willaCollage} 
+                  alt="WILLA atelier collage" 
+                  className="max-w-full h-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
