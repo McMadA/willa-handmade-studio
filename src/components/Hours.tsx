@@ -1,4 +1,5 @@
 import { Clock } from "lucide-react";
+import atelierTriptych from "@/assets/atelier-triptych.png";
 
 const hours = [
   { days: "2 dec", time: "9:00 tot 18:00" },
@@ -48,6 +49,15 @@ const Hours = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Triptych Image */}
+        <div className="mt-12">
+          <img 
+            src={atelierTriptych} 
+            alt="Atelier impressies - garens, naaien en stoffen" 
+            className="w-full rounded-2xl shadow-xl"
+          />
         </div>
       </div>
     </section>
