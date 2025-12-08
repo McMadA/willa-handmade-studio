@@ -7,7 +7,6 @@ const hours = [
   { days: "4 dec", time: "9:00 tot 17:30" },
   { days: "9 dec", time: "9:00 tot 18:00" },
   { days: "10 dec", time: "9:00 tot 17:30" },
-  { days: "11 dec", time: "9:00 tot 17:30" },
   { days: "16 dec", time: "9:00 tot 18:00 & 19:30 tot 21:00" },
   { days: "17 dec", time: "9:15 tot 17:30" },
   { days: "18 dec", time: "9:00 tot 17:30" },
