@@ -64,7 +64,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://www.instagram.com/willa_handmade_style__/"
+            href="https://www.instagram.com/willa_by.willeke"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-background p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-4 border-accent group"
