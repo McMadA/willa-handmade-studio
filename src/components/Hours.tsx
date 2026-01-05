@@ -2,16 +2,17 @@ import { Clock } from "lucide-react";
 import atelierTriptych from "@/assets/atelier-triptych.png";
 
 const hours = [
-  { days: "2 dec", time: "9:00 tot 18:00" },
-  { days: "3 dec", time: "9:00 tot 17:30" },
-  { days: "4 dec", time: "9:00 tot 17:30" },
-  { days: "9 dec", time: "9:00 tot 18:00" },
-  { days: "10 dec", time: "9:00 tot 17:30" },
-  { days: "16 dec", time: "9:00 tot 18:00 & 19:30 tot 21:00" },
-  { days: "17 dec", time: "9:15 tot 17:30" },
-  { days: "18 dec", time: "9:00 tot 17:30" },
-  { days: "23 dec", time: "9:00 tot 18:00 & 19:30 tot 21:00" },
-  { days: "24 dec", time: "9:00 tot 18:00" },
+  { days: "6 januari", time: "9:00 tot 18:00" },
+  { days: "7 januari", time: "9:00 tot 18:00" },
+  { days: "8 januari", time: "9:00 tot 17:30" },
+  { days: "13 januari", time: "9:00 tot 17:30" },
+  { days: "14 januari", time: "9:00 tot 17:00" },
+  { days: "15 januari", time: "9:00 tot 17:30" },
+  { days: "20 januari", time: "9:00 tot 17:30" },
+  { days: "21 januari", time: "9:00 tot 18:00" },
+  { days: "22 januari", time: "9:00 tot 17:30" },
+  { days: "27 januari", time: "9:00 tot 17:30" },
+  { days: "28 januari", time: "9:30 tot 18:00" },
 ];
 
 const Hours = () => {
