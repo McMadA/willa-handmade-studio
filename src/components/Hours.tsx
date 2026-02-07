@@ -2,17 +2,18 @@ import { Clock } from "lucide-react";
 import atelierTriptych from "@/assets/atelier-triptych.png";
 
 const hours = [
-  { days: "6 januari", time: "9:00 tot 18:00" },
-  { days: "7 januari", time: "9:00 tot 18:00" },
-  { days: "8 januari", time: "9:00 tot 17:30" },
-  { days: "13 januari", time: "9:00 tot 17:30" },
-  { days: "14 januari", time: "9:00 tot 17:00" },
-  { days: "15 januari", time: "9:00 tot 17:30" },
-  { days: "20 januari", time: "9:00 tot 17:30" },
-  { days: "21 januari", time: "9:00 tot 18:00" },
-  { days: "22 januari", time: "9:00 tot 17:30" },
-  { days: "27 januari", time: "9:00 tot 17:30" },
-  { days: "28 januari", time: "9:30 tot 18:00" },
+  { days: "10 feb", time: "9:00 tot 18:00" },
+  { days: "11 feb", time: "9:00 tot 16:30" },
+  { days: "12 feb", time: "9:00 tot 13:00" },
+  { days: "17 feb", time: "9:00 tot 17:30" },
+  { days: "18 feb", time: "stoffenspektakel" },
+  { days: "19 feb", time: "9:00 tot 14:00" },
+  { days: "24 feb", time: "9:00 tot 17:30" },
+  { days: "25 feb", time: "9:00 tot 18:00" },
+  { days: "", time: "" },
+  { days: "3 maart", time: "9:00 tot 17:30" },
+  { days: "4 maart", time: "9:00 tot 18:00" },
+  { days: "5 maart", time: "9:00 tot 13:00" },
 ];
 
 const Hours = () => {
@@ -35,17 +36,21 @@ const Hours = () => {
           <div className="bg-card rounded-2xl shadow-xl overflow-hidden border-4 border-accent">
             <div className="divide-y divide-border">
               {hours.map((item, index) => (
-                <div 
-                  key={index}
-                  className="flex justify-between items-center p-6 hover:bg-muted/50 transition-colors duration-200"
-                >
-                  <span className="font-poppins text-lg text-foreground font-medium">
-                    {item.days}
-                  </span>
-                  <span className="font-poppins text-lg text-primary font-semibold">
-                    {item.time}
-                  </span>
-                </div>
+                item.days === "" ? (
+                  <div key={index} className="h-4" />
+                ) : (
+                  <div 
+                    key={index}
+                    className="flex justify-between items-center p-6 hover:bg-muted/50 transition-colors duration-200"
+                  >
+                    <span className="font-poppins text-lg text-foreground font-medium">
+                      {item.days}
+                    </span>
+                    <span className="font-poppins text-lg text-primary font-semibold">
+                      {item.time}
+                    </span>
+                  </div>
+                )
               ))}
             </div>
           </div>
