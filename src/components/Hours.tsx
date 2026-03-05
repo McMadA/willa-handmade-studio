@@ -1,22 +1,45 @@
+import { useState, useEffect } from "react";
 import { Clock } from "lucide-react";
+import { getUpcomingOpeningHours, type DailyHours } from "@/lib/firebase";
 import atelierTriptych from "@/assets/atelier-triptych.png";
 
-const hours = [
-  { days: "10 feb", time: "9:00 tot 18:00" },
-  { days: "11 feb", time: "9:00 tot 16:30" },
-  { days: "12 feb", time: "9:00 tot 13:00" },
-  { days: "17 feb", time: "9:00 tot 17:30" },
-  { days: "18 feb", time: "stoffenspektakel" },
-  { days: "19 feb", time: "9:00 tot 14:00" },
-  { days: "24 feb", time: "9:00 tot 17:30" },
-  { days: "25 feb", time: "9:00 tot 18:00" },
-  { days: "", time: "" },
-  { days: "3 maart", time: "9:00 tot 17:30" },
-  { days: "4 maart", time: "9:00 tot 18:00" },
-  { days: "5 maart", time: "9:00 tot 13:00" },
+const MONTH_NAMES_NL = [
+  "januari", "februari", "maart", "april", "mei", "juni",
+  "juli", "augustus", "september", "oktober", "november", "december"
 ];
 
+const DAY_NAMES_NL = ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"];
+
 const Hours = () => {
+  const [hours, setHours] = useState<DailyHours[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    const fetchHours = async () => {
+      try {
+        const data = await getUpcomingOpeningHours();
+        setHours(data);
+      } catch (err) {
+        console.error("Error fetching opening hours:", err);
+        setError(true);
+      }
+      setLoading(false);
+    };
+    fetchHours();
+  }, []);
+
+  const formatDate = (dateStr: string) => {
+    const date = new Date(dateStr);
+    const dayName = DAY_NAMES_NL[date.getDay()];
+    const dayNum = date.getDate();
+    const month = MONTH_NAMES_NL[date.getMonth()];
+    return `${dayName} ${dayNum} ${month}`;
+  };
+
+  // Filter to only show open days
+  const openDays = hours.filter((h) => h.isOpen);
+
   return (
     <section id="openingstijden" className="py-20 bg-background">
       <div className="container mx-auto px-6">
@@ -34,25 +57,46 @@ const Hours = () => {
           </div>
 
           <div className="bg-card rounded-2xl shadow-xl overflow-hidden border-4 border-accent">
-            <div className="divide-y divide-border">
-              {hours.map((item, index) => (
-                item.days === "" ? (
-                  <div key={index} className="h-4" />
-                ) : (
-                  <div 
-                    key={index}
-                    className="flex justify-between items-center p-6 hover:bg-muted/50 transition-colors duration-200"
-                  >
-                    <span className="font-poppins text-lg text-foreground font-medium">
-                      {item.days}
-                    </span>
-                    <span className="font-poppins text-lg text-primary font-semibold">
-                      {item.time}
-                    </span>
-                  </div>
-                )
-              ))}
-            </div>
+            {loading ? (
+              <div className="flex items-center justify-center py-16">
+                <div className="animate-spin w-8 h-8 border-4 border-primary border-t-transparent rounded-full" />
+              </div>
+            ) : error ? (
+              <div className="p-8 text-center">
+                <p className="font-poppins text-muted-foreground">
+                  Kon openingstijden niet laden. Probeer het later opnieuw.
+                </p>
+              </div>
+            ) : openDays.length === 0 ? (
+              <div className="p-8 text-center">
+                <p className="font-poppins text-muted-foreground">
+                  Er zijn momenteel geen openingstijden ingepland. Neem contact op voor een afspraak.
+                </p>
+              </div>
+            ) : (
+              <div className="divide-y divide-border">
+                {openDays.map((item, index) => {
+                  // Check if there is a month gap between this item and the previous
+                  const prevMonth = index > 0 ? new Date(openDays[index - 1].date).getMonth() : null;
+                  const currentMonth = new Date(item.date).getMonth();
+                  const showSpacer = prevMonth !== null && prevMonth !== currentMonth;
+
+                  return (
+                    <div key={item.date}>
+                      {showSpacer && <div className="h-4 bg-muted/30" />}
+                      <div className="flex justify-between items-center p-6 hover:bg-muted/50 transition-colors duration-200">
+                        <span className="font-poppins text-lg text-foreground font-medium capitalize">
+                          {formatDate(item.date)}
+                        </span>
+                        <span className="font-poppins text-lg text-primary font-semibold">
+                          {item.openTime} tot {item.closeTime}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
 
