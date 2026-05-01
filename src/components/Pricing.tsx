@@ -1,5 +1,5 @@
 const pricingItems = [
-  { service: "Kleding inkorten", price: "V.A. €10,00" },
+  { service: "Broeken inkorten", price: "V.A. €15,00" },
   { service: "Kleine reparatie", price: "V.A. €5,00" },
   { service: "Grote reparatie", price: "V.A. €10,00" },
   { service: "Kleding innemen", price: "V.A. €10,00" },

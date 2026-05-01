@@ -10,3 +10,9 @@
 - **Stack:** React + Vite + TypeScript + Tailwind CSS + Shadcn UI + Firebase (Firestore + Auth)
 - **Notes:** Firebase config is read from `VITE_FIREBASE_*` env vars (see `.env.example`). All UI text is in Dutch. No Firebase Hosting — site is hosted on Vimexx.
 - **Firestore Rules:** The `openingHours` collection needs `allow read: if true` (public) and `allow write: if request.auth != null` (admin only). Default Firestore rules deny all access — must be updated in Firebase Console > Firestore > Rules.
+
+### 2026-05-01 — Pricing Update
+
+- **Problem:** Needed to update the pricing for shortening pants ("broeken inkorten") and change it from a starting price to a fixed price.
+- **Solution:** Updated `src/components/Pricing.tsx` to reflect the fixed price of €15,00 for "Broeken inkorten".
+- **Key files:** `src/components/Pricing.tsx`
