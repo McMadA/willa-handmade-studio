@@ -57,6 +57,22 @@ const Services = () => {
             );
           })}
         </div>
+
+        {/* Banner linking to Naailes */}
+        <div className="mt-12 text-center">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 bg-card rounded-2xl border-2 border-accent/50 shadow-md">
+            <span className="font-poppins text-foreground text-base md:text-lg font-medium">
+              Wil je liever zelf leren naaien, kleding vermaken of patronen leren maken?
+            </span>
+            <a
+              href="#naailes"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-poppins text-sm font-medium hover:opacity-90 transition-all hover:scale-105 shadow-sm shrink-0"
+            >
+              <span>Bekijk de Naailessen</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

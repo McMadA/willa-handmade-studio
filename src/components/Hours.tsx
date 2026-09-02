@@ -41,7 +41,7 @@ const Hours = () => {
   const openDays = hours.filter((h) => h.isOpen);
 
   return (
-    <section id="openingstijden" className="py-20 bg-background">
+    <section id="openingstijden" className="py-20 bg-card">
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
@@ -56,7 +56,7 @@ const Hours = () => {
             </p>
           </div>
 
-          <div className="bg-card rounded-2xl shadow-xl overflow-hidden border-4 border-accent">
+          <div className="bg-background rounded-2xl shadow-xl overflow-hidden border-4 border-accent">
             {loading ? (
               <div className="flex items-center justify-center py-16">
                 <div className="animate-spin w-8 h-8 border-4 border-primary border-t-transparent rounded-full" />

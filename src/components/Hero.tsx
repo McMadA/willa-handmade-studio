@@ -26,13 +26,21 @@ const Hero = () => {
           <br />
           tot snel bij Willa..!!
         </p>
-        <a 
-          href="#contact" 
-          className="inline-block bg-primary text-primary-foreground px-8 py-4 rounded-full font-poppins font-medium hover:opacity-90 transition-all duration-300 hover:scale-105 animate-fade-in shadow-lg"
-          style={{ animationDelay: '0.4s' }}
-        >
-          Neem contact op
-        </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <a 
+            href="#naailes" 
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-poppins font-medium hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-lg"
+          >
+            <span>Bekijk Naailessen</span>
+            <span className="text-xs bg-white/20 px-2.5 py-0.5 rounded-full font-semibold">Nieuw</span>
+          </a>
+          <a 
+            href="#contact" 
+            className="w-full sm:w-auto inline-flex items-center justify-center bg-card/80 backdrop-blur-sm text-foreground border-2 border-accent/60 px-8 py-4 rounded-full font-poppins font-medium hover:border-primary hover:text-primary transition-all duration-300 hover:scale-105 shadow-md"
+          >
+            Neem contact op
+          </a>
+        </div>
       </div>
     </section>
   );

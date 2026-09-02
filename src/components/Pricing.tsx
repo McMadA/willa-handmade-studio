@@ -14,7 +14,7 @@ const pricingItems = [
 
 const Pricing = () => {
   return (
-    <section id="prijzen" className="py-20 bg-card">
+    <section id="prijzen" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -26,7 +26,7 @@ const Pricing = () => {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <div className="bg-background rounded-2xl shadow-xl overflow-hidden border-4 border-accent">
+          <div className="bg-card rounded-2xl shadow-xl overflow-hidden border-4 border-accent">
             <div className="divide-y divide-border">
               {pricingItems.map((item, index) => (
                 <div 

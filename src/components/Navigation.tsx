@@ -5,9 +5,10 @@ import willaLogo from "@/assets/willa-logo.jpg";
 const navItems = [
   { name: "Eigenaar", href: "#eigenaar" },
   { name: "WILLA", href: "#willa" },
-  { name: "Openingstijden", href: "#openingstijden" },
   { name: "Diensten", href: "#diensten" },
+  { name: "Naailes", href: "#naailes" },
   { name: "Prijzen", href: "#prijzen" },
+  { name: "Openingstijden", href: "#openingstijden" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -46,13 +47,13 @@ const Navigation = () => {
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-5 lg:gap-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleClick(e, item.href)}
-                className="font-poppins text-foreground hover:text-primary transition-colors duration-200 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                className="font-poppins text-sm lg:text-base text-foreground hover:text-primary transition-colors duration-200 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 {item.name}
               </a>
