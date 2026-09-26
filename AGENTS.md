@@ -23,3 +23,9 @@
 - **Solution:** Created `src/components/Naailes.tsx` featuring September & October 2026 dates for Dinsdagavond and Zaterdagochtend, highlight pills, and direct CTA buttons (Email with prefilled template, telephone link to `06-25393938`, and direct WhatsApp). Updated navigation, hero buttons, services bridge, and alternating section styling.
 - **Key files:** `src/components/Naailes.tsx`, `src/components/Navigation.tsx`, `src/components/Hero.tsx`, `src/components/Services.tsx`, `src/pages/Index.tsx`, `src/components/Pricing.tsx`, `src/components/Hours.tsx`, `src/components/Contact.tsx`
 
+### 2026-09-26 — Naailes Class Times
+
+- **Problem:** Willeke requested adding specific lesson times to the sewing lessons section: Tuesday evening (19:30 - 21:30) and Saturday morning (10:00 - 12:00).
+- **Solution:** Updated `src/components/Naailes.tsx` with explicit times: added `time` property to `ScheduleGroup`, prominent time badges in the card headers, replaced "Tijden in overleg" with the exact times in the card footers, and updated the prefilled registration email template with the time slots.
+- **Key files:** `src/components/Naailes.tsx`
+

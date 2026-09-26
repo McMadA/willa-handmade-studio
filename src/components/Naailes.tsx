@@ -8,6 +8,7 @@ interface DateGroup {
 interface ScheduleGroup {
   title: string;
   period: string;
+  time: string;
   description: string;
   badge: string;
   schedule: DateGroup[];
@@ -17,6 +18,7 @@ const scheduleData: ScheduleGroup[] = [
   {
     title: "Dinsdagavond",
     period: "Avondlessen",
+    time: "19:30 – 21:30 uur",
     description: "Ideaal om de week creatief te onderbreken na werk of studie.",
     badge: "8 lessen ingepland",
     schedule: [
@@ -43,6 +45,7 @@ const scheduleData: ScheduleGroup[] = [
   {
     title: "Zaterdagochtend",
     period: "Ochtendlessen",
+    time: "10:00 – 12:00 uur",
     description: "Begin je weekend ontspannen en creatief met een kopje thee of koffie.",
     badge: "6 lessen ingepland",
     schedule: [
@@ -76,7 +79,7 @@ const highlights = [
 const Naailes = () => {
   const mailSubject = encodeURIComponent("Aanmelding Naailes WILLA");
   const mailBody = encodeURIComponent(
-    "Hallo Willeke,\n\nIk meld mij graag aan voor de naailes!\n\nVoorkeur groep: [Dinsdagavond / Zaterdagochtend]\nNaam:\nTelefoonnummer:\nErvaring (beginner / enige ervaring / gevorderd):\nEventuele vragen of opmerkingen:\n\nMet vriendelijke groet,"
+    "Hallo Willeke,\n\nIk meld mij graag aan voor de naailes!\n\nVoorkeur groep:\n[ ] Dinsdagavond (19:30 - 21:30 uur)\n[ ] Zaterdagochtend (10:00 - 12:00 uur)\n\nNaam:\nTelefoonnummer:\nErvaring (beginner / enige ervaring / gevorderd):\nEventuele vragen of opmerkingen:\n\nMet vriendelijke groet,"
   );
   const mailHref = `mailto:Willekevdvw@gmail.com?subject=${mailSubject}&body=${mailBody}`;
 
@@ -137,6 +140,10 @@ const Naailes = () => {
                 <h3 className="font-playfair text-3xl font-bold text-foreground mb-2">
                   {group.title}
                 </h3>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-accent/20 text-foreground font-poppins text-sm font-semibold mb-3 border border-accent/40">
+                  <Clock className="w-4 h-4 text-primary" />
+                  <span>{group.time}</span>
+                </div>
                 <p className="font-poppins text-muted-foreground text-sm">
                   {group.description}
                 </p>
@@ -169,8 +176,8 @@ const Naailes = () => {
 
               {/* Card Footer info */}
               <div className="px-8 py-4 bg-muted/30 border-t border-border flex items-center justify-between text-xs text-muted-foreground font-poppins">
-                <span className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-primary" /> Tijden in overleg
+                <span className="flex items-center gap-1.5 font-medium text-foreground">
+                  <Clock className="w-3.5 h-3.5 text-primary" /> {group.time}
                 </span>
                 <span>Locatie: Bloemersmastraat 20</span>
               </div>
