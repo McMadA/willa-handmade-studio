@@ -29,3 +29,12 @@
 - **Solution:** Updated `src/components/Naailes.tsx` with explicit times: added `time` property to `ScheduleGroup`, prominent time badges in the card headers, replaced "Tijden in overleg" with the exact times in the card footers, and updated the prefilled registration email template with the time slots.
 - **Key files:** `src/components/Naailes.tsx`
 
+### 2026-10-16 — Dynamic Naailessen Management in Admin Portal & November Dates
+
+- **Problem:** Willeke wanted to be able to manage the sewing lessons schedule herself via the admin portal (`/admin`), just like opening hours, and submitted November 2026 dates (Tuesdays: 3, 10, 17, 24 Nov; Saturdays: 14, 21, 28 Nov).
+- **Solution:** 
+  1. Updated `/admin` (`Admin.tsx`) with a tabbed interface ("Openingstijden" and "Naailessen"), with direct link support (`?tab=naailes`).
+  2. Implemented month-by-month toggle controls identical to opening hours for Naailessen, complete with quick action buttons ("Alle dinsdagen aanzetten", "Alle zaterdagen aanzetten", "Alles wissen") and start/end time pickers.
+  3. Stored naailes documents in Firestore within the existing `openingHours` collection using document prefix `naailes_${date}` and `isNaailes: true`, guaranteeing instant compatibility with existing Firestore security rules without requiring rule updates or composite indexes. Updated `Hours.tsx` filter to ignore naailes documents.
+  4. Made `Naailes.tsx` dynamic by fetching upcoming lessons via `getUpcomingNaailessen()`, with immediate fallback to verified default schedule (September, October, and the new November 2026 dates).
+- **Key files:** `src/lib/firebase.ts`, `src/pages/Admin.tsx`, `src/components/Naailes.tsx`
