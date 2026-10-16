@@ -67,24 +67,29 @@ const Admin = () => {
   const [savingNaailes, setSavingNaailes] = useState(false);
   const [fetchingNaailes, setFetchingNaailes] = useState(false);
 
-  // Auth listener
+  // Auth listener with safety timeout
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (u) => {
-      setUser(u);
-      setLoading(false);
-    });
-    return () => unsubscribe();
-  }, []);
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      (u) => {
+        setUser(u);
+        setLoading(false);
+      },
+      (err) => {
+        console.error("Auth listener error:", err);
+        setLoading(false);
+      }
+    );
 
-  // Fetch / build days when month changes
-  useEffect(() => {
-    if (!user) return;
-    if (activeTab === "hours") {
-      buildMonthHours();
-    } else {
-      buildMonthNaailesDays();
-    }
-  }, [user, activeTab, buildMonthHours, buildMonthNaailesDays]);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+
+    return () => {
+      unsubscribe();
+      clearTimeout(timer);
+    };
+  }, []);
 
   const getDayOfWeek = (dateStr: string) => {
     const date = new Date(dateStr);
@@ -221,6 +226,16 @@ const Admin = () => {
     setNaailesDays(newDays);
     setFetchingNaailes(false);
   }, [selectedYear, selectedMonth]);
+
+  // Fetch / build days when month or tab changes
+  useEffect(() => {
+    if (!user) return;
+    if (activeTab === "hours") {
+      buildMonthHours();
+    } else {
+      buildMonthNaailesDays();
+    }
+  }, [user, activeTab, buildMonthHours, buildMonthNaailesDays]);
 
   const toggleNaailesDay = (index: number) => {
     setNaailesDays((prev) => {
