@@ -42,8 +42,8 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" onClick={(e) => handleClick(e, "#")} className="flex items-center">
-            <img src={willaLogo} alt="Willa Logo" className="h-12 w-12 rounded-full object-cover" />
+          <a href="#" onClick={(e) => handleClick(e, "#")} className="flex items-center" aria-label="Willa Handmade Design Home">
+            <img src={willaLogo} alt="Willa Logo" className="h-12 w-12 rounded-full object-cover" decoding="async" fetchPriority="high" />
           </a>
 
           {/* Desktop Menu */}
@@ -63,6 +63,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Menu sluiten" : "Menu openen"}
             className="md:hidden p-2 rounded-lg hover:bg-muted/50 transition-colors"
           >
             {isOpen ? (

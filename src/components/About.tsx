@@ -26,7 +26,9 @@ const About = () => {
               <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-accent">
                 <img 
                   src={willekePortrait} 
-                  alt="Willeke - Eigenaar van WILLA" 
+                  alt="Willeke - Eigenaar van WILLA"
+                  loading="lazy"
+                  decoding="async" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -57,7 +59,9 @@ const About = () => {
               <div className="flex justify-center">
                 <img 
                   src={willaCollage} 
-                  alt="WILLA atelier collage" 
+                  alt="WILLA atelier collage"
+                  loading="lazy"
+                  decoding="async" 
                   className="max-w-full h-auto"
                 />
               </div>

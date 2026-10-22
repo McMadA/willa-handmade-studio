@@ -105,6 +105,8 @@ const Hours = () => {
           <img 
             src={atelierTriptych} 
             alt="Atelier impressies - garens, naaien en stoffen" 
+            loading="lazy"
+            decoding="async" 
             className="w-full rounded-2xl shadow-xl"
           />
         </div>

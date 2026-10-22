@@ -16,6 +16,8 @@ const Hero = () => {
           src={willaLogo} 
           alt="Willa Handmade Design Logo" 
           className="w-48 h-48 md:w-64 md:h-64 mx-auto mb-6 animate-fade-in rounded-full object-cover"
+          decoding="async"
+          fetchPriority="high"
         />
         <h1 className="font-playfair text-5xl md:text-7xl font-bold mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
           Willa Handmade Design

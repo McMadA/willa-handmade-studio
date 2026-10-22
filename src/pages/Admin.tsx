@@ -549,6 +549,9 @@ const Admin = () => {
                         {/* Toggle */}
                         <button
                           type="button"
+                          role="switch"
+                          aria-checked={day.isOpen}
+                          aria-label={`Toggle openingstijden ${day.day}`}
                           onClick={() => toggleHourDay(index)}
                           className={`w-12 h-7 rounded-full transition-all duration-300 relative flex-shrink-0 ${
                             day.isOpen ? "bg-primary" : "bg-border"
@@ -699,6 +702,9 @@ const Admin = () => {
                         {/* Toggle */}
                         <button
                           type="button"
+                          role="switch"
+                          aria-checked={day.isLesson}
+                          aria-label={`Toggle naailes op ${day.label}`}
                           onClick={() => toggleNaailesDay(index)}
                           className={`w-12 h-7 rounded-full transition-all duration-300 relative flex-shrink-0 ${
                             day.isLesson ? "bg-primary" : "bg-border"
